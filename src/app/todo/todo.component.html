@@ -1,0 +1,15 @@
+<div class="root">
+    <h1>ToDo List</h1>
+    <div class="addToDo">
+        <input #todo class= "addText" placeholder="Add todo">
+        <button class="addItem" (click)="pushItemToTodoList(todo.value)">Add To-Do</button>
+    </div>
+    <ul>
+        <li *ngFor="let todo of todoList; let todoIndex = index">
+            <input class = "check" type="checkbox">
+            <label class="strikethrough">{{todo}}</label>
+            <span (click)="removeTodo(todoIndex)">X</span>
+            
+        </li>
+    </ul>
+</div>

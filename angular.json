@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "todoListApp": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "todoListApp"
+    }
+  },
+  "defaultProject": "todoListApp",
+  "cli": {
+    "analytics": "435d7d04-843c-4a55-8967-7752e4bb0dce"
+  }
 }
