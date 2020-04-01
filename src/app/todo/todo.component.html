@@ -2,14 +2,23 @@
     <h1>ToDo List</h1>
     <div class="addToDo">
         <input #todo class= "addText" placeholder="Add todo">
-        <button class="addItem" (click)="pushItemToTodoList(todo.value)">Add To-Do</button>
+        <button class="addItem" (click)="pushItemToTodoList(todo.value)">Add</button>
     </div>
     <ul>
         <li *ngFor="let todo of todoList; let todoIndex = index">
-            <input class = "check" type="checkbox">
-            <label class="strikethrough">{{todo}}</label>
-            <span (click)="removeTodo(todoIndex)">X</span>
-            
+            <label>{{todo}}</label>
+            <span (click)="removeTodo(todoIndex)">X</span>            
         </li>
     </ul>
+    <button (click) = "saveList()">Save To-do list</button>
+    <h4>Saved Todos</h4>
+    <div class="todos">
+        <ul>
+        <li *ngFor="let todo of savedLists; let todoIndex = index">
+            
+        <label>{{todo}}</label>
+                                  
+        </li>
+        </ul>  
+    </div>
 </div>

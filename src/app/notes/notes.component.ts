@@ -12,4 +12,14 @@ export class NotesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  notesList = [];
+  saveNote = function(note: string) {
+      if(note != "")
+      {
+        this.notesList.push(note);
+      }
+  }
+  deletenote = function (index: number) {
+    this.notesList.splice(index,1)
+  }
 }

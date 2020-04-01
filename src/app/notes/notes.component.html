@@ -1,1 +1,16 @@
-<p>notes works!</p>
+<div class="root">
+    <h1>Create Notes</h1>
+    <div class="addToDo">
+        <textarea #todo class= "addNote" placeholder="Add Note"></textarea><br>
+        <button (click) = "saveNote(todo.value)">Add</button>
+    </div>    
+    <div class="notes">
+        <h4>Saved Notes</h4>
+        <ul>
+        <li *ngFor="let note of notesList; let noteIndex = index">            
+        <label>{{note}}</label>
+        <button (click) = "deletenote(noteIndex)">Delete</button>                          
+        </li>
+        </ul>  
+    </div>
+</div>
