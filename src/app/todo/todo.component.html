@@ -2,7 +2,7 @@
     <h1>ToDo List</h1>
     <div class="addToDo">
         <input #todo class= "addText" placeholder="Add todo">
-        <button class="addItem" (click)="pushItemToTodoList(todo.value)">Add</button>
+        <button class="addItem" (click)="pushItemToTodoList(todo.value); todo.value = ''">Add</button>
     </div>
     <ul>
         <li *ngFor="let todo of todoList; let todoIndex = index">
